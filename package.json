@@ -1,0 +1,36 @@
+{
+  "name": "uon",
+  "version": "1.0.0",
+  "description": "A 200b route change observer.",
+  "main": "dist/uon.mjs",
+  "unpkg": "dist/uon.umd.js",
+  "scripts": {
+    "start": "http-server demo --silent & $npm_execpath run watch",
+    "watch": "microbundle watch --format umd --entry demo/src/index.js --output demo/dist/bundle.js -c-1",
+    "build": "microbundle --name uon --format es,umd --sourcemap false",
+    "prepare": "$npm_execpath run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vaneenige/uon.git"
+  },
+  "author": {
+    "name": "Colin van Eenige",
+    "email": "cvaneenige@gmail.com",
+    "url": "https://use-the-platform.com"
+  },
+  "files": [
+    "src",
+    "dist"
+  ],
+  "keywords": [
+    "route",
+    "observer",
+    "navigation"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^0.11.1",
+    "microbundle": "^0.9.0"
+  }
+}
