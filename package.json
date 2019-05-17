@@ -1,6 +1,6 @@
 {
   "name": "uon",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A tiny route change observer.",
   "source": "src/index.ts",
   "main": "dist/uon.mjs",

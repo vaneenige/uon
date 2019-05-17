@@ -1,4 +1,4 @@
-function uon(callback: Function) {
+function uon(callback: (pathname: string) => void) {
   // Observe native navigation
   addEventListener('popstate', () => {
     callback(location.pathname);
