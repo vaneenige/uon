@@ -10,9 +10,9 @@ buttons[1].addEventListener('click', () => {
   history.replaceState({}, null, '/' + Math.random());
 });
 
-function handleRoute(route: string) {
+function handleRoute(route) {
   document.querySelector('.current span').textContent = route;
-  document.querySelector('.history span').textContent = (history.length).toString();
+  document.querySelector('.history span').textContent = history.length;
 }
 
 // Observe route changes

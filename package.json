@@ -1,14 +1,15 @@
 {
   "name": "uon",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "A tiny route change observer.",
+  "source": "src/index.ts",
   "main": "dist/uon.mjs",
   "unpkg": "dist/uon.umd.js",
-  "types": "src/index.d.ts",
+  "types": "dist/index.d.ts",
   "scripts": {
     "start": "http-server demo --silent & $npm_execpath run watch",
-    "watch": "microbundle watch --format umd --entry demo/src/index.ts --output demo/dist/bundle.js -c-1",
-    "build": "microbundle --name uon --format es,umd --sourcemap false",
+    "watch": "microbundle watch --format umd --entry demo/src/index.js --output demo/dist/bundle.js -c-1",
+    "build": "microbundle --entry src/index.ts --name uon --format es,umd --sourcemap false",
     "prepare": "$npm_execpath run build"
   },
   "repository": {

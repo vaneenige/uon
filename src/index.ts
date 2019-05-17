@@ -1,6 +1,3 @@
-/**
- * Provide route changes through a callback
- */
 function uon(callback: Function) {
   // Observe native navigation
   addEventListener('popstate', () => {
