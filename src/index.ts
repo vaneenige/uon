@@ -1,8 +1,7 @@
 /**
  * Provide route changes through a callback
- * @param {function} callback
  */
-function uon(callback) {
+function uon(callback: Function) {
   // Observe native navigation
   addEventListener('popstate', () => {
     callback(location.pathname);

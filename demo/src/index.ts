@@ -1,4 +1,4 @@
-import updateOnNavigate from './../../src/index.js';
+import updateOnNavigate from '../../src/index';
 
 const buttons = document.querySelectorAll('button');
 
@@ -10,9 +10,9 @@ buttons[1].addEventListener('click', () => {
   history.replaceState({}, null, '/' + Math.random());
 });
 
-function handleRoute(route) {
+function handleRoute(route: string) {
   document.querySelector('.current span').textContent = route;
-  document.querySelector('.history span').textContent = history.length;
+  document.querySelector('.history span').textContent = (history.length).toString();
 }
 
 // Observe route changes
